@@ -14,10 +14,9 @@
         }
         body {
             background: #0a0a0a;
-            color: #fff;
-            line-height: 1.5;
+            color: #ffffff;
+            line-height: 1.6;
             font-size: 14px;
-            transition: background 0.3s;
         }
         .container {
             max-width: 1200px;
@@ -29,70 +28,74 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 12px 0 10px;
             border-bottom: 2px solid #f5c518;
             flex-wrap: wrap;
         }
         .logo h1 {
             color: #f5c518;
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 900;
-            text-shadow: 0 0 15px rgba(245,197,24,0.4);
+            text-shadow: 0 0 20px rgba(245,197,24,0.3);
+            letter-spacing: 1px;
         }
         .nav {
             display: flex;
-            gap: 5px;
+            gap: 8px;
             flex-wrap: wrap;
         }
         .nav a {
             color: #fff;
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 8px 18px;
             font-weight: 600;
             font-size: 14px;
-            border-radius: 4px;
-            transition: 0.2s;
-            background: rgba(255,255,255,0.03);
+            border-radius: 6px;
+            transition: all 0.25s;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid transparent;
             cursor: pointer;
         }
         .nav a:hover {
             background: #f5c518;
             color: #000;
+            border-color: #f5c518;
         }
         .nav a.logged-in {
-            background: #1a3a1a;
+            background: #0d2d0d;
             color: #4caf50;
             border: 1px solid #4caf50;
             pointer-events: none;
             cursor: default;
         }
-        /* ===== SECURITY ===== */
+        /* ===== SECURITY NOTICE ===== */
         .security-notice {
             background: #1a0000;
             border: 1px solid #cc0000;
             color: #ff6666;
-            padding: 10px 15px;
-            border-radius: 4px;
-            margin: 18px 0;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 18px 0 22px;
             font-size: 13px;
             text-align: center;
+            letter-spacing: 0.3px;
         }
         .security-notice strong {
             color: #ff3333;
         }
         /* ===== PROMO BANNER ===== */
         .promo-banner {
-            background: linear-gradient(135deg, #141414, #1e1e1e);
-            border-left: 5px solid #f5c518;
-            padding: 20px 25px;
-            margin: 20px 0;
-            border-radius: 6px;
-            box-shadow: 0 0 30px rgba(245,197,24,0.08);
+            background: linear-gradient(145deg, #121212, #1e1e1e);
+            border-left: 6px solid #f5c518;
+            padding: 22px 28px;
+            margin: 20px 0 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 35px rgba(245,197,24,0.06);
         }
         .promo-banner h2 {
             color: #f5c518;
-            font-size: 20px;
-            margin-bottom: 12px;
+            font-size: 22px;
+            margin-bottom: 14px;
             font-weight: 700;
         }
         .promo-banner ul {
@@ -100,7 +103,7 @@
             padding: 0;
         }
         .promo-banner ul li {
-            padding: 7px 0;
+            padding: 8px 0;
             border-bottom: 1px solid #2a2a2a;
             font-size: 15px;
             color: #ddd;
@@ -115,24 +118,28 @@
         /* ===== WINNER LIST ===== */
         .winner-list {
             background: #0d0d0d;
-            padding: 18px 20px;
-            border-radius: 6px;
-            margin: 20px 0;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 20px 0 25px;
             border: 1px solid #1a1a1a;
         }
         .winner-list h3 {
             color: #f5c518;
-            margin-bottom: 12px;
-            font-size: 18px;
+            margin-bottom: 14px;
+            font-size: 19px;
         }
         .winner-item {
-            padding: 8px 0;
+            padding: 9px 0;
             border-bottom: 1px solid #1a1a1a;
             color: #aaa;
             font-size: 14px;
         }
         .winner-item:last-child {
             border-bottom: none;
+        }
+        .winner-item .user {
+            color: #fff;
+            font-weight: 600;
         }
         .winner-item .amount {
             color: #f5c518;
@@ -141,35 +148,40 @@
         .winner-dots {
             text-align: center;
             color: #444;
-            padding: 8px 0 2px;
-            letter-spacing: 4px;
-            font-size: 18px;
+            padding: 10px 0 4px;
+            letter-spacing: 5px;
+            font-size: 20px;
         }
         /* ===== INFO GRID ===== */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 20px 0;
+            gap: 18px;
+            margin: 25px 0 30px;
         }
         .info-block {
             background: #0d0d0d;
-            border-radius: 8px;
-            padding: 18px 20px;
+            border-radius: 10px;
+            padding: 20px 18px;
             border: 1px solid #1a1a1a;
             text-align: center;
+            transition: border-color 0.3s;
+        }
+        .info-block:hover {
+            border-color: #f5c518;
         }
         .info-block .label {
             color: #888;
             font-size: 13px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
+            font-weight: 600;
         }
         .info-block .value {
             color: #f5c518;
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 900;
-            margin: 6px 0;
+            margin: 8px 0 4px;
         }
         .info-block .sub {
             color: #666;
@@ -179,79 +191,98 @@
         .info-block.purple .value { color: #9c27b0; }
         .info-block.orange .value { color: #ff9800; }
         .info-block.orange { border-color: #333366; }
-        /* ===== DEPOSIT ===== */
+        /* ===== DEPOSIT SECTION ===== */
         .deposit-section {
             background: #0d0d0d;
             border: 2px solid #f5c518;
-            border-radius: 12px;
-            padding: 30px 25px;
-            margin: 30px 0;
+            border-radius: 14px;
+            padding: 32px 28px;
+            margin: 30px 0 35px;
             text-align: center;
         }
         .deposit-section h2 {
             color: #f5c518;
-            font-size: 24px;
-            margin-bottom: 6px;
+            font-size: 26px;
+            margin-bottom: 8px;
+            font-weight: 700;
         }
         .deposit-section .sub-title {
             color: #888;
             font-size: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
         .bank-info {
             background: #141414;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 22px 26px;
+            border-radius: 10px;
             display: inline-block;
             text-align: left;
-            min-width: 300px;
+            min-width: 320px;
             border: 1px solid #222;
         }
         .bank-info .row {
             display: flex;
             justify-content: space-between;
-            padding: 6px 0;
+            padding: 7px 0;
             border-bottom: 1px solid #1a1a1a;
         }
-        .bank-info .row:last-child { border-bottom: none; }
-        .bank-info .label { color: #888; font-size: 13px; }
-        .bank-info .val { color: #fff; font-weight: 600; font-size: 15px; }
-        .bank-info .val.gold { color: #f5c518; }
+        .bank-info .row:last-child {
+            border-bottom: none;
+        }
+        .bank-info .label {
+            color: #888;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .bank-info .val {
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .bank-info .val.gold {
+            color: #f5c518;
+        }
         .qr-placeholder {
-            margin: 20px auto;
-            width: 180px;
-            height: 180px;
+            margin: 22px auto 10px;
+            width: 190px;
+            height: 190px;
             background: #111;
             border: 2px dashed #f5c518;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #555;
-            border-radius: 10px;
-            font-size: 13px;
-            letter-spacing: 1px;
+            border-radius: 12px;
+            font-size: 14px;
+            letter-spacing: 1.5px;
         }
-        .qr-placeholder::before { content: "MÃ QR VIETQR"; }
+        .qr-placeholder::before {
+            content: "MÃ QR VIETQR";
+        }
         .btn-deposit {
             background: #f5c518;
             color: #000;
             border: none;
-            padding: 14px 45px;
-            font-size: 18px;
+            padding: 15px 50px;
+            font-size: 19px;
             font-weight: 800;
             border-radius: 50px;
             cursor: pointer;
-            transition: 0.3s;
-            margin-top: 12px;
+            transition: all 0.3s;
+            margin-top: 14px;
             text-transform: uppercase;
-            box-shadow: 0 0 40px rgba(245,197,24,0.25);
+            box-shadow: 0 0 45px rgba(245,197,24,0.2);
         }
         .btn-deposit:hover {
             background: #ffd700;
             transform: scale(1.02);
-            box-shadow: 0 0 60px rgba(245,197,24,0.5);
+            box-shadow: 0 0 70px rgba(245,197,24,0.4);
         }
-        .deposit-note { color: #555; font-size: 12px; margin-top: 12px; }
+        .deposit-note {
+            color: #555;
+            font-size: 12px;
+            margin-top: 14px;
+        }
         /* ===== LOGIN MODAL ===== */
         .login-overlay {
             display: none;
@@ -260,86 +291,102 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.85);
-            z-index: 999;
+            background: rgba(0,0,0,0.88);
+            z-index: 1000;
             justify-content: center;
             align-items: center;
         }
-        .login-overlay.active { display: flex; }
+        .login-overlay.active {
+            display: flex;
+        }
         .login-modal {
             background: #1a1a1a;
             border: 2px solid #f5c518;
-            border-radius: 16px;
-            padding: 40px 35px;
-            max-width: 420px;
-            width: 90%;
+            border-radius: 18px;
+            padding: 42px 38px 38px;
+            max-width: 430px;
+            width: 92%;
             position: relative;
-            box-shadow: 0 0 60px rgba(245,197,24,0.15);
+            box-shadow: 0 0 70px rgba(245,197,24,0.12);
+            animation: modalFade 0.35s ease;
+        }
+        @keyframes modalFade {
+            from { opacity: 0; transform: scale(0.94) translateY(-20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
         }
         .login-modal .close-btn {
             position: absolute;
-            top: 12px;
-            right: 18px;
-            font-size: 28px;
+            top: 14px;
+            right: 20px;
+            font-size: 30px;
             color: #888;
             cursor: pointer;
             transition: 0.2s;
             background: none;
             border: none;
+            line-height: 1;
         }
-        .login-modal .close-btn:hover { color: #f5c518; }
+        .login-modal .close-btn:hover {
+            color: #f5c518;
+            transform: rotate(90deg);
+        }
         .login-modal h2 {
             color: #f5c518;
-            font-size: 24px;
+            font-size: 26px;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 28px;
             font-weight: 700;
+            letter-spacing: 1px;
         }
-        .login-modal .input-group { margin-bottom: 18px; }
+        .login-modal .input-group {
+            margin-bottom: 20px;
+        }
         .login-modal .input-group label {
             display: block;
             color: #aaa;
             font-size: 13px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             font-weight: 600;
+            letter-spacing: 0.5px;
         }
         .login-modal .input-group input {
             width: 100%;
-            padding: 12px 15px;
-            border-radius: 8px;
+            padding: 13px 16px;
+            border-radius: 10px;
             border: 1px solid #333;
             background: #0d0d0d;
             color: #fff;
-            font-size: 15px;
-            transition: 0.2s;
+            font-size: 16px;
+            transition: 0.25s;
             outline: none;
         }
         .login-modal .input-group input:focus {
             border-color: #f5c518;
-            box-shadow: 0 0 12px rgba(245,197,24,0.15);
+            box-shadow: 0 0 18px rgba(245,197,24,0.12);
         }
         .login-modal .btn-login {
             width: 100%;
-            padding: 14px;
+            padding: 15px;
             background: #f5c518;
             color: #000;
             border: none;
             border-radius: 50px;
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 800;
             cursor: pointer;
             transition: 0.3s;
             text-transform: uppercase;
-            margin-top: 8px;
-            box-shadow: 0 0 30px rgba(245,197,24,0.2);
+            margin-top: 10px;
+            box-shadow: 0 0 35px rgba(245,197,24,0.15);
         }
         .login-modal .btn-login:hover {
             background: #ffd700;
-            transform: scale(1.02);
+            transform: scale(1.01);
+            box-shadow: 0 0 55px rgba(245,197,24,0.3);
         }
         .login-modal .register-link {
             text-align: center;
-            margin-top: 18px;
+            margin-top: 20px;
             color: #888;
             font-size: 14px;
         }
@@ -348,29 +395,38 @@
             text-decoration: none;
             font-weight: 600;
         }
-        .login-modal .register-link a:hover { text-decoration: underline; }
+        .login-modal .register-link a:hover {
+            text-decoration: underline;
+        }
         .login-modal .error-msg {
             color: #ff3333;
-            font-size: 13px;
+            font-size: 14px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 14px;
             display: none;
+            background: rgba(255,0,0,0.08);
+            padding: 8px;
+            border-radius: 6px;
         }
-        .login-modal .error-msg.show { display: block; }
-        /* ===== GAME LOBBY - GIAO DIỆN SAU ĐĂNG NHẬP ===== */
+        .login-modal .error-msg.show {
+            display: block;
+        }
+        /* ===== GAME LOBBY - SAU ĐĂNG NHẬP ===== */
         .game-lobby {
             display: none;
             background: #0d0d0d;
-            border-radius: 16px;
-            padding: 30px 25px;
-            margin: 30px 0;
+            border-radius: 18px;
+            padding: 30px 28px;
+            margin: 30px 0 35px;
             border: 2px solid #f5c518;
-            box-shadow: 0 0 40px rgba(245,197,24,0.05);
-            animation: fadeIn 0.5s ease;
+            box-shadow: 0 0 50px rgba(245,197,24,0.04);
+            animation: fadeInUp 0.5s ease;
         }
-        .game-lobby.active { display: block; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+        .game-lobby.active {
+            display: block;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
             to { opacity: 1; transform: translateY(0); }
         }
         .lobby-header {
@@ -379,17 +435,17 @@
             align-items: center;
             flex-wrap: wrap;
             border-bottom: 1px solid #222;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
+            padding-bottom: 16px;
+            margin-bottom: 22px;
         }
         .lobby-header h2 {
             color: #f5c518;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
         }
         .lobby-header .user-info {
             color: #aaa;
-            font-size: 14px;
+            font-size: 15px;
         }
         .lobby-header .user-info span {
             color: #f5c518;
@@ -399,60 +455,63 @@
             background: #cc0000;
             color: #fff;
             border: none;
-            padding: 8px 20px;
+            padding: 9px 24px;
             border-radius: 50px;
             font-weight: 700;
             cursor: pointer;
-            transition: 0.2s;
+            transition: 0.25s;
             font-size: 13px;
         }
-        .lobby-header .logout-btn:hover { background: #ff0000; }
-        /* ===== GAME GRID - SAO CHÉP 100% TỪ F1686S ===== */
+        .lobby-header .logout-btn:hover {
+            background: #ff0000;
+            transform: scale(1.02);
+        }
+        /* ===== GAME GRID - CHÍNH XÁC TỪ F1686S ===== */
         .game-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 15px;
+            gap: 16px;
+            margin-top: 18px;
         }
         .game-card {
             background: #141414;
-            border-radius: 12px;
-            padding: 18px 12px;
+            border-radius: 14px;
+            padding: 20px 14px;
             text-align: center;
             border: 1px solid #222;
-            transition: 0.3s;
+            transition: all 0.3s;
             cursor: pointer;
             position: relative;
             overflow: hidden;
         }
         .game-card:hover {
             border-color: #f5c518;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(245,197,24,0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(245,197,24,0.06);
         }
         .game-card .game-icon {
-            font-size: 40px;
-            margin-bottom: 8px;
+            font-size: 44px;
+            margin-bottom: 10px;
             display: block;
         }
         .game-card .game-name {
             color: #fff;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 700;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
         .game-card .game-desc {
             color: #666;
-            font-size: 11px;
+            font-size: 12px;
         }
         .game-card .game-status {
             display: inline-block;
-            margin-top: 8px;
-            padding: 3px 12px;
+            margin-top: 10px;
+            padding: 4px 16px;
             border-radius: 50px;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 700;
-            background: #1a3a1a;
+            background: #0d2d0d;
             color: #4caf50;
         }
         .game-card .game-status.hot {
@@ -460,30 +519,43 @@
             color: #ff4444;
         }
         .game-card .game-status.new {
-            background: #1a2a4a;
+            background: #1a2a5a;
             color: #4488ff;
         }
-        /* Tag HOT góc trên */
         .game-card .hot-tag {
             position: absolute;
-            top: 8px;
-            right: 8px;
+            top: 10px;
+            right: 10px;
             background: #ff0000;
             color: #fff;
             font-size: 9px;
             font-weight: 900;
-            padding: 2px 10px;
-            border-radius: 20px;
+            padding: 3px 12px;
+            border-radius: 30px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            box-shadow: 0 0 15px rgba(255,0,0,0.3);
+            box-shadow: 0 0 20px rgba(255,0,0,0.25);
+        }
+        .game-card .new-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #2266ff;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 900;
+            padding: 3px 12px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 20px rgba(34,102,255,0.25);
         }
         /* ===== FOOTER ===== */
         .footer {
             text-align: center;
-            padding: 25px 0 15px;
+            padding: 28px 0 18px;
             border-top: 1px solid #1a1a1a;
-            margin-top: 30px;
+            margin-top: 35px;
             color: #555;
             font-size: 13px;
         }
@@ -496,32 +568,37 @@
             text-decoration: none;
             margin: 0 6px;
         }
-        .footer a:hover { text-decoration: underline; }
+        .footer a:hover {
+            text-decoration: underline;
+        }
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
             .game-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 768px) {
-            .header { flex-direction: column; align-items: stretch; gap: 10px; }
+            .header { flex-direction: column; align-items: stretch; gap: 12px; }
             .nav { justify-content: center; }
-            .nav a { padding: 6px 12px; font-size: 12px; }
+            .nav a { padding: 6px 14px; font-size: 13px; }
             .info-grid { grid-template-columns: 1fr; }
             .bank-info { min-width: auto; width: 100%; }
-            .deposit-section { padding: 20px 15px; }
+            .deposit-section { padding: 22px 16px; }
             .logo h1 { text-align: center; }
             .game-grid { grid-template-columns: repeat(2, 1fr); }
-            .login-modal { padding: 30px 20px; }
+            .login-modal { padding: 30px 22px; }
+            .lobby-header { flex-direction: column; gap: 12px; align-items: stretch; text-align: center; }
         }
         @media (max-width: 480px) {
             .container { padding: 10px 12px; }
-            .promo-banner { padding: 15px; }
-            .promo-banner h2 { font-size: 17px; }
+            .promo-banner { padding: 16px; }
+            .promo-banner h2 { font-size: 18px; }
             .promo-banner ul li { font-size: 13px; }
             .winner-item { font-size: 13px; }
             .game-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-            .game-card { padding: 12px 8px; }
-            .game-card .game-icon { font-size: 30px; }
+            .game-card { padding: 14px 8px; }
+            .game-card .game-icon { font-size: 32px; }
             .game-card .game-name { font-size: 12px; }
+            .bank-info { padding: 16px; }
+            .bank-info .row { flex-wrap: wrap; gap: 4px; }
         }
     </style>
 </head>
@@ -557,9 +634,9 @@
     <!-- ===== WINNER LIST ===== -->
     <section class="winner-list">
         <h3>⚡️ Chúc mừng thành viên thắng lớn:</h3>
-        <div class="winner-item">1. [*******f123] Thắng <span class="amount">326 triệu</span> tại PG - QUYẾT CHIẾN GIÀNH TIỀN THƯỞNG.</div>
-        <div class="winner-item">2. [*******3008] Thắng <span class="amount">500 triệu</span> tại SEXY - BACCARAT.</div>
-        <div class="winner-item">3. [*******anht] Thắng <span class="amount">510 triệu</span> tại DG - BACCARAT.</div>
+        <div class="winner-item"><span class="user">1. [*******f123]</span> Thắng <span class="amount">326 triệu</span> tại PG - QUYẾT CHIẾN GIÀNH TIỀN THƯỞNG.</div>
+        <div class="winner-item"><span class="user">2. [*******3008]</span> Thắng <span class="amount">500 triệu</span> tại SEXY - BACCARAT.</div>
+        <div class="winner-item"><span class="user">3. [*******anht]</span> Thắng <span class="amount">510 triệu</span> tại DG - BACCARAT.</div>
         <div class="winner-dots">.....</div>
     </section>
 
@@ -598,111 +675,36 @@
             <div class="row"><span class="label">Nội dung:</span><span class="val" style="color:#aaa;font-size:13px;">[MÃ GD] + [TÊN ĐĂNG NHẬP]</span></div>
         </div>
         <div class="qr-placeholder"></div>
-        <p style="color:#666;font-size:12px;margin:-8px 0 8px;">(Quét mã VietQR từ ứng dụng VIB)</p>
+        <p style="color:#666;font-size:12px;margin:-6px 0 8px;">(Quét mã VietQR từ ứng dụng VIB)</p>
         <button class="btn-deposit" id="depositBtn">NẠP TIỀN NGAY</button>
         <p class="deposit-note">* Liên kết VietQR.vn được tích hợp tự động</p>
     </section>
 
-    <!-- ===== GAME LOBBY - GIAO DIỆN SAU ĐĂNG NHẬP (ẨN MẶC ĐỊNH) ===== -->
+    <!-- ===== GAME LOBBY - SAU ĐĂNG NHẬP ===== -->
     <section class="game-lobby" id="gameLobby">
         <div class="lobby-header">
             <h2>🎮 SẢNH GAME F168</h2>
             <div class="user-info">👤 Xin chào, <span id="displayUser">Thành viên</span></div>
             <button class="logout-btn" id="logoutBtn">ĐĂNG XUẤT</button>
         </div>
-        <!-- GAME GRID - SAO CHÉP 100% TỪ F1686S -->
+        <!-- GAME GRID - SAO CHÉP CHÍNH XÁC TỪ F1686S -->
         <div class="game-grid">
-            <!-- Casino SEXY -->
-            <div class="game-card">
-                <span class="hot-tag">HOT</span>
-                <span class="game-icon">💃</span>
-                <div class="game-name">Casino SEXY</div>
-                <div class="game-desc">Live casino đẳng cấp</div>
-                <span class="game-status hot">HOT</span>
-            </div>
-            <!-- Casino DG -->
-            <div class="game-card">
-                <span class="game-icon">🃏</span>
-                <div class="game-name">Casino DG</div>
-                <div class="game-desc">Baccarat chuyên nghiệp</div>
-                <span class="game-status">ĐANG MỞ</span>
-            </div>
-            <!-- Thể Thao SA -->
-            <div class="game-card">
-                <span class="game-icon">⚽</span>
-                <div class="game-name">Thể Thao SA</div>
-                <div class="game-desc">Cược thể thao đỉnh cao</div>
-                <span class="game-status">ĐANG MỞ</span>
-            </div>
-            <!-- Quyết Chiến (PG) -->
-            <div class="game-card">
-                <span class="hot-tag">HOT</span>
-                <span class="game-icon">⚔️</span>
-                <div class="game-name">Quyết Chiến PG</div>
-                <div class="game-desc">Jackpot khủng</div>
-                <span class="game-status hot">HOT</span>
-            </div>
-            <!-- Kho Báu Aztec -->
-            <div class="game-card">
-                <span class="game-icon">🗿</span>
-                <div class="game-name">Kho Báu Aztec</div>
-                <div class="game-desc">Phiêu lưu tìm kho báu</div>
-                <span class="game-status new">MỚI</span>
-            </div>
-            <!-- Đường Mạt (Mahjong) -->
-            <div class="game-card">
-                <span class="game-icon">🀄</span>
-                <div class="game-name">Đường Mạt</div>
-                <div class="game-desc">Mạt chược trực tuyến</div>
-                <span class="game-status">ĐANG MỞ</span>
-            </div>
-            <!-- Tiền Đạo Bó (Bắn Cá) -->
-            <div class="game-card">
-                <span class="game-icon">🎯</span>
-                <div class="game-name">Tiền Đạo Bó</div>
-                <div class="game-desc">Bắn cá đổi thưởng</div>
-                <span class="game-status">ĐANG MỞ</span>
-            </div>
-            <!-- Nổ Hũ -->
-            <div class="game-card">
-                <span class="hot-tag">HOT</span>
-                <span class="game-icon">💥</span>
-                <div class="game-name">Nổ Hũ</div>
-                <div class="game-desc">Nổ hũ siêu tốc</div>
-                <span class="game-status hot">HOT</span>
-            </div>
-            <!-- Block C (Blockchain) -->
-            <div class="game-card">
-                <span class="game-icon">⛓️</span>
-                <div class="game-name">BLOCK C</div>
-                <div class="game-desc">Game blockchain</div>
-                <span class="game-status new">MỚI</span>
-            </div>
-            <!-- Quyết Chiến (bản 2) -->
-            <div class="game-card">
-                <span class="game-icon">🏹</span>
-                <div class="game-name">Quyết Chiến</div>
-                <div class="game-desc">Đấu trường sinh tử</div>
-                <span class="game-status">ĐANG MỞ</span>
-            </div>
-            <!-- Casino Sexy (bản 2) -->
-            <div class="game-card">
-                <span class="game-icon">🎰</span>
-                <div class="game-name">Casino SEXY 2</div>
-                <div class="game-desc">Slot game hấp dẫn</div>
-                <span class="game-status">ĐANG MỞ</span>
-            </div>
-            <!-- Thể Thao (bóng đá) -->
-            <div class="game-card">
-                <span class="game-icon">🏆</span>
-                <div class="game-name">Thể Thao</div>
-                <div class="game-desc">World Cup 2026</div>
-                <span class="game-status hot">HOT</span>
-            </div>
+            <div class="game-card"><span class="hot-tag">HOT</span><span class="game-icon">💃</span><div class="game-name">Casino SEXY</div><div class="game-desc">Live casino đẳng cấp</div><span class="game-status hot">HOT</span></div>
+            <div class="game-card"><span class="game-icon">🃏</span><div class="game-name">Casino DG</div><div class="game-desc">Baccarat chuyên nghiệp</div><span class="game-status">ĐANG MỞ</span></div>
+            <div class="game-card"><span class="game-icon">⚽</span><div class="game-name">Thể Thao SA</div><div class="game-desc">Cược thể thao đỉnh cao</div><span class="game-status">ĐANG MỞ</span></div>
+            <div class="game-card"><span class="hot-tag">HOT</span><span class="game-icon">⚔️</span><div class="game-name">Quyết Chiến PG</div><div class="game-desc">Jackpot khủng</div><span class="game-status hot">HOT</span></div>
+            <div class="game-card"><span class="new-tag">MỚI</span><span class="game-icon">🗿</span><div class="game-name">Kho Báu Aztec</div><div class="game-desc">Phiêu lưu tìm kho báu</div><span class="game-status new">MỚI</span></div>
+            <div class="game-card"><span class="game-icon">🀄</span><div class="game-name">Đường Mạt</div><div class="game-desc">Mạt chược trực tuyến</div><span class="game-status">ĐANG MỞ</span></div>
+            <div class="game-card"><span class="game-icon">🎯</span><div class="game-name">Tiền Đạo Bó</div><div class="game-desc">Bắn cá đổi thưởng</div><span class="game-status">ĐANG MỞ</span></div>
+            <div class="game-card"><span class="hot-tag">HOT</span><span class="game-icon">💥</span><div class="game-name">Nổ Hũ</div><div class="game-desc">Nổ hũ siêu tốc</div><span class="game-status hot">HOT</span></div>
+            <div class="game-card"><span class="new-tag">MỚI</span><span class="game-icon">⛓️</span><div class="game-name">BLOCK C</div><div class="game-desc">Game blockchain</div><span class="game-status new">MỚI</span></div>
+            <div class="game-card"><span class="game-icon">🏹</span><div class="game-name">Quyết Chiến</div><div class="game-desc">Đấu trường sinh tử</div><span class="game-status">ĐANG MỞ</span></div>
+            <div class="game-card"><span class="game-icon">🎰</span><div class="game-name">Casino SEXY 2</div><div class="game-desc">Slot game hấp dẫn</div><span class="game-status">ĐANG MỞ</span></div>
+            <div class="game-card"><span class="hot-tag">HOT</span><span class="game-icon">🏆</span><div class="game-name">Thể Thao</div><div class="game-desc">World Cup 2026</div><span class="game-status hot">HOT</span></div>
         </div>
-        <!-- Thông báo thêm từ ảnh -->
-        <div style="margin-top: 20px; text-align: center; color: #888; font-size: 13px; border-top: 1px solid #1a1a1a; padding-top: 15px;">
-            🔥 WORLD CUP 2026 - CƯỢC NGAY, THƯỞNG LỚN 🔥
+        <!-- WORLD CUP 2026 BANNER -->
+        <div style="margin-top: 22px; text-align: center; background: linear-gradient(90deg, #1a1a2e, #2a1a1a); padding: 14px; border-radius: 10px; border: 1px solid #f5c51840;">
+            <span style="color: #f5c518; font-weight: 900; font-size: 18px; letter-spacing: 2px;">🏆 WORLD CUP 2026 - CƯỢC NGAY, THƯỞNG LỚN 🏆</span>
         </div>
     </section>
 
@@ -732,41 +734,5 @@
     </footer>
 </div>
 
-<!-- ============================================================ -->
-<!-- ===== JAVASCRIPT - HỆ THỐNG ĐĂNG NHẬP CHUYỂN GIAO DIỆN ===== -->
-<!-- ============================================================ -->
-<script>
-    (function() {
-        // DOM elements
-        const loginOverlay = document.getElementById('loginOverlay');
-        const loginBtn = document.getElementById('loginBtn');
-        const closeLogin = document.getElementById('closeLogin');
-        const submitLogin = document.getElementById('submitLogin');
-        const loginError = document.getElementById('loginError');
-        const loginUser = document.getElementById('loginUser');
-        const loginPass = document.getElementById('loginPass');
-        const gameLobby = document.getElementById('gameLobby');
-        const displayUser = document.getElementById('displayUser');
-        const logoutBtn = document.getElementById('logoutBtn');
-        const registerLink = document.getElementById('registerLink');
-        const registerBtn = document.getElementById('registerBtn');
-        const depositBtn = document.getElementById('depositBtn');
-
-        // Tài khoản hợp lệ (mô phỏng CSDL)
-        const VALID_USER = 'admin';
-        const VALID_PASS = '123456';
-
-        // ---- Mở form đăng nhập ----
-        function openLogin() {
-            loginOverlay.classList.add('active');
-            loginError.classList.remove('show');
-            loginUser.value = '';
-            loginPass.value = '';
-            setTimeout(function() { loginUser.focus(); }, 100);
-        }
-
-        loginBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Nếu đã đăng nhập thì không mở form
-            if (loginBtn.classList.contains('logged-in')) {
-                alert('Bạn đã đăng nhập! Sử dụng nút
+<!-- ============================================================== -->
+<!-- ===== JAVASCRIPT - ĐĂNG NHẬP BÁO
