@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F168 - Cổng Game Uy Tín F168.COM, Đăng Ký Và Đăng Nhập Không Chặn 2026</title>
     <style>
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -16,13 +17,14 @@
             color: #fff;
             line-height: 1.5;
             font-size: 14px;
+            transition: background 0.3s;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 15px 20px;
         }
-        /* HEADER */
+        /* ===== HEADER ===== */
         .header {
             display: flex;
             justify-content: space-between;
@@ -57,7 +59,14 @@
             background: #f5c518;
             color: #000;
         }
-        /* SECURITY */
+        .nav a.logged-in {
+            background: #1a3a1a;
+            color: #4caf50;
+            border: 1px solid #4caf50;
+            pointer-events: none;
+            cursor: default;
+        }
+        /* ===== SECURITY ===== */
         .security-notice {
             background: #1a0000;
             border: 1px solid #cc0000;
@@ -71,7 +80,7 @@
         .security-notice strong {
             color: #ff3333;
         }
-        /* PROMO */
+        /* ===== PROMO BANNER ===== */
         .promo-banner {
             background: linear-gradient(135deg, #141414, #1e1e1e);
             border-left: 5px solid #f5c518;
@@ -103,7 +112,7 @@
             color: #f5c518;
             font-weight: 700;
         }
-        /* WINNER */
+        /* ===== WINNER LIST ===== */
         .winner-list {
             background: #0d0d0d;
             padding: 18px 20px;
@@ -136,7 +145,7 @@
             letter-spacing: 4px;
             font-size: 18px;
         }
-        /* INFO GRID */
+        /* ===== INFO GRID ===== */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -166,19 +175,11 @@
             color: #666;
             font-size: 13px;
         }
-        .info-block.green .value {
-            color: #4caf50;
-        }
-        .info-block.purple .value {
-            color: #9c27b0;
-        }
-        .info-block.orange .value {
-            color: #ff9800;
-        }
-        .info-block.orange {
-            border-color: #333366;
-        }
-        /* DEPOSIT */
+        .info-block.green .value { color: #4caf50; }
+        .info-block.purple .value { color: #9c27b0; }
+        .info-block.orange .value { color: #ff9800; }
+        .info-block.orange { border-color: #333366; }
+        /* ===== DEPOSIT ===== */
         .deposit-section {
             background: #0d0d0d;
             border: 2px solid #f5c518;
@@ -212,21 +213,10 @@
             padding: 6px 0;
             border-bottom: 1px solid #1a1a1a;
         }
-        .bank-info .row:last-child {
-            border-bottom: none;
-        }
-        .bank-info .label {
-            color: #888;
-            font-size: 13px;
-        }
-        .bank-info .val {
-            color: #fff;
-            font-weight: 600;
-            font-size: 15px;
-        }
-        .bank-info .val.gold {
-            color: #f5c518;
-        }
+        .bank-info .row:last-child { border-bottom: none; }
+        .bank-info .label { color: #888; font-size: 13px; }
+        .bank-info .val { color: #fff; font-weight: 600; font-size: 15px; }
+        .bank-info .val.gold { color: #f5c518; }
         .qr-placeholder {
             margin: 20px auto;
             width: 180px;
@@ -241,9 +231,7 @@
             font-size: 13px;
             letter-spacing: 1px;
         }
-        .qr-placeholder::before {
-            content: "MÃ QR VIETQR";
-        }
+        .qr-placeholder::before { content: "MÃ QR VIETQR"; }
         .btn-deposit {
             background: #f5c518;
             color: #000;
@@ -263,12 +251,8 @@
             transform: scale(1.02);
             box-shadow: 0 0 60px rgba(245,197,24,0.5);
         }
-        .deposit-note {
-            color: #555;
-            font-size: 12px;
-            margin-top: 12px;
-        }
-        /* LOGIN MODAL */
+        .deposit-note { color: #555; font-size: 12px; margin-top: 12px; }
+        /* ===== LOGIN MODAL ===== */
         .login-overlay {
             display: none;
             position: fixed;
@@ -281,9 +265,7 @@
             justify-content: center;
             align-items: center;
         }
-        .login-overlay.active {
-            display: flex;
-        }
+        .login-overlay.active { display: flex; }
         .login-modal {
             background: #1a1a1a;
             border: 2px solid #f5c518;
@@ -305,9 +287,7 @@
             background: none;
             border: none;
         }
-        .login-modal .close-btn:hover {
-            color: #f5c518;
-        }
+        .login-modal .close-btn:hover { color: #f5c518; }
         .login-modal h2 {
             color: #f5c518;
             font-size: 24px;
@@ -315,9 +295,7 @@
             margin-bottom: 25px;
             font-weight: 700;
         }
-        .login-modal .input-group {
-            margin-bottom: 18px;
-        }
+        .login-modal .input-group { margin-bottom: 18px; }
         .login-modal .input-group label {
             display: block;
             color: #aaa;
@@ -370,9 +348,7 @@
             text-decoration: none;
             font-weight: 600;
         }
-        .login-modal .register-link a:hover {
-            text-decoration: underline;
-        }
+        .login-modal .register-link a:hover { text-decoration: underline; }
         .login-modal .error-msg {
             color: #ff3333;
             font-size: 13px;
@@ -380,10 +356,8 @@
             margin-top: 10px;
             display: none;
         }
-        .login-modal .error-msg.show {
-            display: block;
-        }
-        /* GAME LOBBY - SẢNH GAME */
+        .login-modal .error-msg.show { display: block; }
+        /* ===== GAME LOBBY - GIAO DIỆN SAU ĐĂNG NHẬP ===== */
         .game-lobby {
             display: none;
             background: #0d0d0d;
@@ -392,11 +366,14 @@
             margin: 30px 0;
             border: 2px solid #f5c518;
             box-shadow: 0 0 40px rgba(245,197,24,0.05);
+            animation: fadeIn 0.5s ease;
         }
-        .game-lobby.active {
-            display: block;
+        .game-lobby.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .game-lobby .lobby-header {
+        .lobby-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -405,20 +382,20 @@
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
-        .game-lobby .lobby-header h2 {
+        .lobby-header h2 {
             color: #f5c518;
             font-size: 22px;
             font-weight: 700;
         }
-        .game-lobby .lobby-header .user-info {
+        .lobby-header .user-info {
             color: #aaa;
             font-size: 14px;
         }
-        .game-lobby .lobby-header .user-info span {
+        .lobby-header .user-info span {
             color: #f5c518;
             font-weight: 700;
         }
-        .game-lobby .lobby-header .logout-btn {
+        .lobby-header .logout-btn {
             background: #cc0000;
             color: #fff;
             border: none;
@@ -429,23 +406,24 @@
             transition: 0.2s;
             font-size: 13px;
         }
-        .game-lobby .lobby-header .logout-btn:hover {
-            background: #ff0000;
-        }
+        .lobby-header .logout-btn:hover { background: #ff0000; }
+        /* ===== GAME GRID - SAO CHÉP 100% TỪ F1686S ===== */
         .game-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
             margin-top: 15px;
         }
         .game-card {
             background: #141414;
             border-radius: 12px;
-            padding: 20px 15px;
+            padding: 18px 12px;
             text-align: center;
             border: 1px solid #222;
             transition: 0.3s;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
         .game-card:hover {
             border-color: #f5c518;
@@ -453,26 +431,26 @@
             box-shadow: 0 8px 30px rgba(245,197,24,0.08);
         }
         .game-card .game-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 40px;
+            margin-bottom: 8px;
             display: block;
         }
         .game-card .game-name {
             color: #fff;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
         .game-card .game-desc {
             color: #666;
-            font-size: 12px;
+            font-size: 11px;
         }
         .game-card .game-status {
             display: inline-block;
-            margin-top: 10px;
-            padding: 4px 14px;
+            margin-top: 8px;
+            padding: 3px 12px;
             border-radius: 50px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             background: #1a3a1a;
             color: #4caf50;
@@ -481,7 +459,26 @@
             background: #3a1a1a;
             color: #ff4444;
         }
-        /* FOOTER */
+        .game-card .game-status.new {
+            background: #1a2a4a;
+            color: #4488ff;
+        }
+        /* Tag HOT góc trên */
+        .game-card .hot-tag {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #ff0000;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 900;
+            padding: 2px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 15px rgba(255,0,0,0.3);
+        }
+        /* ===== FOOTER ===== */
         .footer {
             text-align: center;
             padding: 25px 0 15px;
@@ -499,68 +496,38 @@
             text-decoration: none;
             margin: 0 6px;
         }
-        .footer a:hover {
-            text-decoration: underline;
+        .footer a:hover { text-decoration: underline; }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .game-grid { grid-template-columns: repeat(3, 1fr); }
         }
-        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 10px;
-            }
-            .nav {
-                justify-content: center;
-            }
-            .nav a {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-            .bank-info {
-                min-width: auto;
-                width: 100%;
-            }
-            .deposit-section {
-                padding: 20px 15px;
-            }
-            .logo h1 {
-                text-align: center;
-            }
-            .login-modal {
-                padding: 30px 20px;
-            }
-            .game-grid {
-                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            }
+            .header { flex-direction: column; align-items: stretch; gap: 10px; }
+            .nav { justify-content: center; }
+            .nav a { padding: 6px 12px; font-size: 12px; }
+            .info-grid { grid-template-columns: 1fr; }
+            .bank-info { min-width: auto; width: 100%; }
+            .deposit-section { padding: 20px 15px; }
+            .logo h1 { text-align: center; }
+            .game-grid { grid-template-columns: repeat(2, 1fr); }
+            .login-modal { padding: 30px 20px; }
         }
         @media (max-width: 480px) {
-            .container {
-                padding: 10px 12px;
-            }
-            .promo-banner {
-                padding: 15px;
-            }
-            .promo-banner h2 {
-                font-size: 17px;
-            }
-            .promo-banner ul li {
-                font-size: 13px;
-            }
-            .winner-item {
-                font-size: 13px;
-            }
-            .game-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .container { padding: 10px 12px; }
+            .promo-banner { padding: 15px; }
+            .promo-banner h2 { font-size: 17px; }
+            .promo-banner ul li { font-size: 13px; }
+            .winner-item { font-size: 13px; }
+            .game-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .game-card { padding: 12px 8px; }
+            .game-card .game-icon { font-size: 30px; }
+            .game-card .game-name { font-size: 12px; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <!-- HEADER -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="logo"><h1>F168</h1></div>
         <nav class="nav">
@@ -572,12 +539,12 @@
         </nav>
     </header>
 
-    <!-- SECURITY NOTICE -->
+    <!-- ===== SECURITY NOTICE ===== -->
     <div class="security-notice">
         🔒 <strong>An toàn tài khoản F168</strong> → Không nhập SĐT khi đăng nhập • Không click link lạ • Link chính thức duy nhất: f1686s.com – f1684.ceo – f1685.vip 🔒
     </div>
 
-    <!-- PROMO BANNER -->
+    <!-- ===== PROMO BANNER ===== -->
     <section class="promo-banner">
         <h2>⚡️ Khuyến mãi hôm nay:</h2>
         <ul>
@@ -587,7 +554,7 @@
         </ul>
     </section>
 
-    <!-- WINNER LIST -->
+    <!-- ===== WINNER LIST ===== -->
     <section class="winner-list">
         <h3>⚡️ Chúc mừng thành viên thắng lớn:</h3>
         <div class="winner-item">1. [*******f123] Thắng <span class="amount">326 triệu</span> tại PG - QUYẾT CHIẾN GIÀNH TIỀN THƯỞNG.</div>
@@ -596,7 +563,7 @@
         <div class="winner-dots">.....</div>
     </section>
 
-    <!-- INFO GRID -->
+    <!-- ===== INFO GRID ===== -->
     <div class="info-grid">
         <div class="info-block">
             <div class="label">📢 Thông báo</div>
@@ -620,7 +587,7 @@
         </div>
     </div>
 
-    <!-- DEPOSIT SECTION -->
+    <!-- ===== DEPOSIT SECTION ===== -->
     <section class="deposit-section" id="nap-tien">
         <h2>💳 NẠP TIỀN QUA VIETQR</h2>
         <p class="sub-title">Ngân hàng VIB - Chuyển khoản nhanh 24/7</p>
@@ -636,66 +603,110 @@
         <p class="deposit-note">* Liên kết VietQR.vn được tích hợp tự động</p>
     </section>
 
-    <!-- GAME LOBBY - SẢNH GAME (ẨN MẶC ĐỊNH) -->
+    <!-- ===== GAME LOBBY - GIAO DIỆN SAU ĐĂNG NHẬP (ẨN MẶC ĐỊNH) ===== -->
     <section class="game-lobby" id="gameLobby">
         <div class="lobby-header">
             <h2>🎮 SẢNH GAME F168</h2>
             <div class="user-info">👤 Xin chào, <span id="displayUser">Thành viên</span></div>
             <button class="logout-btn" id="logoutBtn">ĐĂNG XUẤT</button>
         </div>
+        <!-- GAME GRID - SAO CHÉP 100% TỪ F1686S -->
         <div class="game-grid">
+            <!-- Casino SEXY -->
             <div class="game-card">
-                <span class="game-icon">🎰</span>
-                <div class="game-name">QUAY HŨ</div>
-                <div class="game-desc">Jackpot khủng mỗi ngày</div>
+                <span class="hot-tag">HOT</span>
+                <span class="game-icon">💃</span>
+                <div class="game-name">Casino SEXY</div>
+                <div class="game-desc">Live casino đẳng cấp</div>
                 <span class="game-status hot">HOT</span>
             </div>
+            <!-- Casino DG -->
             <div class="game-card">
-                <span class="game-icon">♠️</span>
-                <div class="game-name">BACCARAT</div>
-                <div class="game-desc">Sảnh bài đẳng cấp</div>
+                <span class="game-icon">🃏</span>
+                <div class="game-name">Casino DG</div>
+                <div class="game-desc">Baccarat chuyên nghiệp</div>
                 <span class="game-status">ĐANG MỞ</span>
             </div>
-            <div class="game-card">
-                <span class="game-icon">🎲</span>
-                <div class="game-name">TÀI XỈU</div>
-                <div class="game-desc">Lắc xí ngầu may mắn</div>
-                <span class="game-status hot">HOT</span>
-            </div>
-            <div class="game-card">
-                <span class="game-icon">🐉</span>
-                <div class="game-name">DRAGON TIGER</div>
-                <div class="game-desc">Rồng Hổ trực tiếp</div>
-                <span class="game-status">ĐANG MỞ</span>
-            </div>
+            <!-- Thể Thao SA -->
             <div class="game-card">
                 <span class="game-icon">⚽</span>
-                <div class="game-name">THỂ THAO</div>
+                <div class="game-name">Thể Thao SA</div>
                 <div class="game-desc">Cược thể thao đỉnh cao</div>
                 <span class="game-status">ĐANG MỞ</span>
             </div>
+            <!-- Quyết Chiến (PG) -->
+            <div class="game-card">
+                <span class="hot-tag">HOT</span>
+                <span class="game-icon">⚔️</span>
+                <div class="game-name">Quyết Chiến PG</div>
+                <div class="game-desc">Jackpot khủng</div>
+                <span class="game-status hot">HOT</span>
+            </div>
+            <!-- Kho Báu Aztec -->
+            <div class="game-card">
+                <span class="game-icon">🗿</span>
+                <div class="game-name">Kho Báu Aztec</div>
+                <div class="game-desc">Phiêu lưu tìm kho báu</div>
+                <span class="game-status new">MỚI</span>
+            </div>
+            <!-- Đường Mạt (Mahjong) -->
+            <div class="game-card">
+                <span class="game-icon">🀄</span>
+                <div class="game-name">Đường Mạt</div>
+                <div class="game-desc">Mạt chược trực tuyến</div>
+                <span class="game-status">ĐANG MỞ</span>
+            </div>
+            <!-- Tiền Đạo Bó (Bắn Cá) -->
             <div class="game-card">
                 <span class="game-icon">🎯</span>
-                <div class="game-name">BẮN CÁ</div>
+                <div class="game-name">Tiền Đạo Bó</div>
                 <div class="game-desc">Bắn cá đổi thưởng</div>
                 <span class="game-status">ĐANG MỞ</span>
             </div>
+            <!-- Nổ Hũ -->
             <div class="game-card">
-                <span class="game-icon">🃏</span>
-                <div class="game-name">POKER</div>
-                <div class="game-desc">Xì tố chuyên nghiệp</div>
+                <span class="hot-tag">HOT</span>
+                <span class="game-icon">💥</span>
+                <div class="game-name">Nổ Hũ</div>
+                <div class="game-desc">Nổ hũ siêu tốc</div>
                 <span class="game-status hot">HOT</span>
             </div>
+            <!-- Block C (Blockchain) -->
             <div class="game-card">
-                <span class="game-icon">💥</span>
-                <div class="game-name">NỔ HŨ</div>
-                <div class="game-desc">Nổ hũ siêu tốc</div>
+                <span class="game-icon">⛓️</span>
+                <div class="game-name">BLOCK C</div>
+                <div class="game-desc">Game blockchain</div>
+                <span class="game-status new">MỚI</span>
+            </div>
+            <!-- Quyết Chiến (bản 2) -->
+            <div class="game-card">
+                <span class="game-icon">🏹</span>
+                <div class="game-name">Quyết Chiến</div>
+                <div class="game-desc">Đấu trường sinh tử</div>
                 <span class="game-status">ĐANG MỞ</span>
             </div>
+            <!-- Casino Sexy (bản 2) -->
+            <div class="game-card">
+                <span class="game-icon">🎰</span>
+                <div class="game-name">Casino SEXY 2</div>
+                <div class="game-desc">Slot game hấp dẫn</div>
+                <span class="game-status">ĐANG MỞ</span>
+            </div>
+            <!-- Thể Thao (bóng đá) -->
+            <div class="game-card">
+                <span class="game-icon">🏆</span>
+                <div class="game-name">Thể Thao</div>
+                <div class="game-desc">World Cup 2026</div>
+                <span class="game-status hot">HOT</span>
+            </div>
+        </div>
+        <!-- Thông báo thêm từ ảnh -->
+        <div style="margin-top: 20px; text-align: center; color: #888; font-size: 13px; border-top: 1px solid #1a1a1a; padding-top: 15px;">
+            🔥 WORLD CUP 2026 - CƯỢC NGAY, THƯỞNG LỚN 🔥
         </div>
     </section>
 
-    <!-- LOGIN OVERLAY -->
+    <!-- ===== LOGIN OVERLAY ===== -->
     <div class="login-overlay" id="loginOverlay">
         <div class="login-modal">
             <button class="close-btn" id="closeLogin">&times;</button>
@@ -714,138 +725,48 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <p><span class="official">🔒 Link chính thức duy nhất:</span> <a href="#">f1686s.com</a> – <a href="#">f1684.ceo</a> – <a href="#">f1685.vip</a></p>
         <p style="margin-top:8px;">© 2026 F168 - Cổng game uy tín. Bản quyền thuộc về tập đoàn giải trí.</p>
     </footer>
 </div>
 
+<!-- ============================================================ -->
+<!-- ===== JAVASCRIPT - HỆ THỐNG ĐĂNG NHẬP CHUYỂN GIAO DIỆN ===== -->
+<!-- ============================================================ -->
 <script>
-    // ============================================
-    // HỆ THỐNG ĐĂNG NHẬP - BÁO THÀNH CÔNG 100%
-    // ============================================
-    const loginOverlay = document.getElementById('loginOverlay');
-    const loginBtn = document.getElementById('loginBtn');
-    const closeLogin = document.getElementById('closeLogin');
-    const submitLogin = document.getElementById('submitLogin');
-    const loginError = document.getElementById('loginError');
-    const loginUser = document.getElementById('loginUser');
-    const loginPass = document.getElementById('loginPass');
-    const gameLobby = document.getElementById('gameLobby');
-    const displayUser = document.getElementById('displayUser');
-    const logoutBtn = document.getElementById('logoutBtn');
-    const registerLink = document.getElementById('registerLink');
+    (function() {
+        // DOM elements
+        const loginOverlay = document.getElementById('loginOverlay');
+        const loginBtn = document.getElementById('loginBtn');
+        const closeLogin = document.getElementById('closeLogin');
+        const submitLogin = document.getElementById('submitLogin');
+        const loginError = document.getElementById('loginError');
+        const loginUser = document.getElementById('loginUser');
+        const loginPass = document.getElementById('loginPass');
+        const gameLobby = document.getElementById('gameLobby');
+        const displayUser = document.getElementById('displayUser');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const registerLink = document.getElementById('registerLink');
+        const registerBtn = document.getElementById('registerBtn');
+        const depositBtn = document.getElementById('depositBtn');
 
-    // Tài khoản mặc định (mô phỏng cơ sở dữ liệu)
-    const VALID_USER = 'admin';
-    const VALID_PASS = '123456';
+        // Tài khoản hợp lệ (mô phỏng CSDL)
+        const VALID_USER = 'admin';
+        const VALID_PASS = '123456';
 
-    // Mở form đăng nhập
-    loginBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        loginOverlay.classList.add('active');
-        loginError.classList.remove('show');
-        loginUser.value = '';
-        loginPass.value = '';
-        loginUser.focus();
-    });
-
-    // Đóng form
-    closeLogin.addEventListener('click', function() {
-        loginOverlay.classList.remove('active');
-        loginError.classList.remove('show');
-    });
-    loginOverlay.addEventListener('click', function(e) {
-        if (e.target === loginOverlay) {
-            loginOverlay.classList.remove('active');
+        // ---- Mở form đăng nhập ----
+        function openLogin() {
+            loginOverlay.classList.add('active');
             loginError.classList.remove('show');
-        }
-    });
-
-    // Xử lý đăng nhập - BÁO THÀNH CÔNG
-    submitLogin.addEventListener('click', function() {
-        const user = loginUser.value.trim();
-        const pass = loginPass.value.trim();
-
-        if (user === '' || pass === '') {
-            loginError.textContent = '❌ Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!';
-            loginError.classList.add('show');
-            return;
-        }
-
-        // Kiểm tra tài khoản (mô phỏng)
-        if (user === VALID_USER && pass === VALID_PASS) {
-            // ĐĂNG NHẬP THÀNH CÔNG
-            loginError.classList.remove('show');
-            loginOverlay.classList.remove('active');
-            
-            // Hiển thị sảnh game
-            gameLobby.classList.add('active');
-            displayUser.textContent = user;
-            
-            // Thông báo thành công 100%
-            alert('✅ ĐĂNG NHẬP THÀNH CÔNG!\n\nChào mừng ' + user + ' quay trở lại F168.\nBạn đã vào sảnh game thành công.');
-
-            // Cập nhật trạng thái header
-            loginBtn.textContent = '👤 ' + user;
-            loginBtn.style.background = '#1a3a1a';
-            loginBtn.style.color = '#4caf50';
-            loginBtn.style.border = '1px solid #4caf50';
-            loginBtn.style.pointerEvents = 'none';
-            loginBtn.style.cursor = 'default';
-
-            // Cuộn đến sảnh game
-            setTimeout(function() {
-                gameLobby.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 300);
-        } else {
-            // ĐĂNG NHẬP THẤT BẠI
-            loginError.textContent = '❌ Sai tên đăng nhập hoặc mật khẩu! Vui lòng thử lại.';
-            loginError.classList.add('show');
             loginUser.value = '';
             loginPass.value = '';
-            loginUser.focus();
+            setTimeout(function() { loginUser.focus(); }, 100);
         }
-    });
 
-    // Xử lý phím Enter trong form
-    loginUser.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            loginPass.focus();
-        }
-    });
-    loginPass.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            submitLogin.click();
-        }
-    });
-
-    // Đăng xuất
-    logoutBtn.addEventListener('click', function() {
-        if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
-            gameLobby.classList.remove('active');
-            loginBtn.textContent = 'Đăng nhập';
-            loginBtn.style.background = 'rgba(255,255,255,0.03)';
-            loginBtn.style.color = '#fff';
-            loginBtn.style.border = 'none';
-            loginBtn.style.pointerEvents = 'auto';
-            loginBtn.style.cursor = 'pointer';
-            alert('✅ Đã đăng xuất thành công!');
-        }
-    });
-
-    // Đăng ký (mô phỏng)
-    registerLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('📝 CHỨC NĂNG ĐĂNG KÝ:\n\nTài khoản mặc định: admin / 123456\nHãy sử dụng tài khoản này để đăng nhập.\n\n(Liên hệ quản trị viên để tạo tài khoản mới)');
-    });
-    document.getElementById('registerBtn').addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('📝 CHỨC NĂNG ĐĂNG KÝ:\n\nTài khoản mặc định: admin / 123456\nHãy sử dụng tài khoản này để đăng nhập.\n\n(Liên hệ quản trị viên để tạo tài khoản mới)');
-    });
-
-    // Nút nạp tiền - hướng dẫn chi tiết
-    document.getElementById('depositBtn').addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('HƯỚNG DẪN NẠP TIỀN VIB VIETQR:\n\n1. Mở ứng dụng VIB hoặc VietQR.\n2. Quét mã QR hoặc
+        loginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Nếu đã đăng nhập thì không mở form
+            if (loginBtn.classList.contains('logged-in')) {
+                alert('Bạn đã đăng nhập! Sử dụng nút
